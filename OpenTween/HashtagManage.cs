@@ -42,6 +42,7 @@ namespace OpenTween
         public bool IsPermanent { get; private set; } = false;
         public bool IsHead { get; private set; } = false;
         public bool IsNotAddToAtReply { get; private set; } = true;
+        public bool IsREC_jikkyo { get; private set; } =  false;
 
         /// <summary>
         /// エラー時にダイアログを表示させない (ユニットテストなどで使用)
@@ -149,6 +150,7 @@ namespace OpenTween
         public void AddHashToHistory(string hash, bool isIgnorePermanent)
         {
             hash = hash.Trim();
+            hash = hash.Replace(" #REC_jikkyo", "");
             if (!string.IsNullOrEmpty(hash))
             {
                 if (isIgnorePermanent || !this.IsPermanent)
@@ -209,7 +211,7 @@ namespace OpenTween
             this.ChangeMode(false);
         }
 
-        public HashtagManage(AtIdSupplement hashSuplForm, string[] history, string permanentHash, bool IsPermanent, bool IsHead, bool IsNotAddToAtReply)
+        public HashtagManage(AtIdSupplement hashSuplForm, string[] history, string permanentHash, bool IsPermanent, bool IsHead, bool IsNotAddToAtReply, bool IsREC_jikkyo)
         {
             // この呼び出しは、Windows フォーム デザイナで必要です。
             InitializeComponent();
@@ -222,6 +224,7 @@ namespace OpenTween
             this.IsPermanent = IsPermanent;
             this.IsHead = IsHead;
             this.IsNotAddToAtReply = IsNotAddToAtReply;
+            this.IsREC_jikkyo = IsREC_jikkyo;
         }
 
         private void UseHashText_KeyPress(object sender, KeyPressEventArgs e)
@@ -252,12 +255,24 @@ namespace OpenTween
         private void HistoryHashList_DoubleClick(object sender, EventArgs e)
             => this.OK_Button_Click(null, null);
 
+        public string DealWithREC_jikkyo (string str)
+        {
+            if (this.IsREC_jikkyo && str.IndexOf("#REC_jikkyo") < 0 && !string.IsNullOrEmpty(str))
+                str += " #REC_jikkyo";
+            else
+                str = str.Replace(" #REC_jikkyo", "");
+
+            return str;
+        }
+
         public void ToggleHash()
         {
             if (string.IsNullOrEmpty(this.UseHash))
             {
                 if (this.HistoryHashList.Items.Count > 0)
                     this.UseHash = this.HistoryHashList.Items[0].ToString();
+
+                this.UseHash = DealWithREC_jikkyo(this.UseHash);
             }
             else
             {
@@ -394,6 +409,8 @@ namespace OpenTween
             this.IsHead = this.RadioHead.Checked;
             this.UseHash = hash;
 
+            this.UseHash = DealWithREC_jikkyo(this.UseHash);
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -420,5 +437,8 @@ namespace OpenTween
 
         private void CheckNotAddToAtReply_CheckedChanged(object sender, EventArgs e)
             => this.IsNotAddToAtReply = CheckNotAddToAtReply.Checked;
+
+        private void CheckREC_jikkyo_CheckedChanged(object sender, EventArgs e)
+            => this.IsREC_jikkyo = CheckREC_jikkyo.Checked;
     }
 }

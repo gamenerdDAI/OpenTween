@@ -46,6 +46,7 @@
             this.PermOK_Button = new System.Windows.Forms.Button();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CheckNotAddToAtReply = new System.Windows.Forms.CheckBox();
+            this.CheckREC_jikkyo = new System.Windows.Forms.CheckBox();
             this.GroupDetail = new System.Windows.Forms.GroupBox();
             this.UseHashText = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
@@ -180,6 +181,15 @@
             this.CheckNotAddToAtReply.Name = "CheckNotAddToAtReply";
             this.CheckNotAddToAtReply.UseVisualStyleBackColor = true;
             this.CheckNotAddToAtReply.CheckedChanged += new System.EventHandler(this.CheckNotAddToAtReply_CheckedChanged);
+            //
+            // CheckREC_jikkyo
+            //
+            resources.ApplyResources(this.CheckREC_jikkyo, "CheckREC_jikkyo");
+            this.CheckREC_jikkyo.Checked = true;
+            this.CheckREC_jikkyo.CheckState = System.Windows.Forms.CheckState.Unchecked;
+            this.CheckREC_jikkyo.Name = "CheckREC_jikkyo";
+            this.CheckREC_jikkyo.UseVisualStyleBackColor = true;
+            this.CheckREC_jikkyo.CheckedChanged += new System.EventHandler(this.CheckREC_jikkyo_CheckedChanged);
             // 
             // GroupDetail
             // 
@@ -209,6 +219,7 @@
             this.Controls.Add(this.TableLayoutButtons);
             this.Controls.Add(this.GroupHashtag);
             this.Controls.Add(this.CheckNotAddToAtReply);
+            this.Controls.Add(this.CheckREC_jikkyo);
             this.Controls.Add(this.GroupDetail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
@@ -249,6 +260,7 @@
         internal System.Windows.Forms.Button PermOK_Button;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel2;
         internal System.Windows.Forms.CheckBox CheckNotAddToAtReply;
+        internal System.Windows.Forms.CheckBox CheckREC_jikkyo;
         internal System.Windows.Forms.GroupBox GroupDetail;
         internal System.Windows.Forms.TextBox UseHashText;
         internal System.Windows.Forms.Label Label1;

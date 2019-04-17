@@ -630,6 +630,32 @@
   <data name="&gt;&gt;CheckNotAddToAtReply.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+
+  <data name="CheckREC_jikkyo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckREC_jikkyo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 375</value>
+  </data>
+  <data name="CheckREC_jikkyo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 16</value>
+  </data>
+  <data name="CheckREC_jikkyo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CheckREC_jikkyo.Text" xml:space="preserve">
+    <value>REC_jikkyo</value>
+  </data>
+  <data name="&gt;&gt;CheckREC_jikkyo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=newtral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckREC_jikkyo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CheckREC_jikkyo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+
   <data name="&gt;&gt;UseHashText.Name" xml:space="preserve">
     <value>UseHashText</value>
   </data>

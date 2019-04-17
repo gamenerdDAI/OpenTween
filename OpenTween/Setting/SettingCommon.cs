@@ -172,6 +172,7 @@ namespace OpenTween
         public bool HashIsPermanent = false;
         public bool HashIsHead = false;
         public bool HashIsNotAddToAtReply = true;
+        public bool HashIsREC_jikkyo = true;
         public bool PreviewEnable = true;
         public bool StatusAreaAtBottom = true;
 

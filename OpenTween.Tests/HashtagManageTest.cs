@@ -39,7 +39,7 @@ namespace OpenTween
             var hashtags = new[] { "#foo", "#bar" };
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -54,7 +54,7 @@ namespace OpenTween
             var hashtags = Array.Empty<string>();
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -67,7 +67,7 @@ namespace OpenTween
         public void AddHashtag_Test()
         {
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -86,7 +86,7 @@ namespace OpenTween
         public void AddHashtag_FullWidthTest()
         {
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -107,7 +107,7 @@ namespace OpenTween
             // ハッシュタグを表す「#」の直後に結合文字 (濁点など) が続いた場合に対するテスト
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -127,7 +127,7 @@ namespace OpenTween
         public void AddHashtag_MultipleTest()
         {
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -146,7 +146,7 @@ namespace OpenTween
         public void AddHashtag_InvalidTest()
         {
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -168,7 +168,7 @@ namespace OpenTween
             var hashtags = new[] { "#foo", "#bar" };
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -191,7 +191,7 @@ namespace OpenTween
             var hashtags = new[] { "#foo", "#bar" };
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -210,7 +210,7 @@ namespace OpenTween
             var hashtags = new[] { "#foo", "#bar", "#baz" };
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -230,7 +230,7 @@ namespace OpenTween
             var hashtags = new[] { "#foo", "#bar" };
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -249,7 +249,7 @@ namespace OpenTween
             var hashtags = new[] { "#foo" };
 
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, hashtags, "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 
@@ -265,7 +265,7 @@ namespace OpenTween
         public void EditModeSwitch_Test()
         {
             using (var atDialog = new AtIdSupplement())
-            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false))
+            using (var hashDialog = new HashtagManage(atDialog, Array.Empty<string>(), "", false, false, false, false))
             {
                 hashDialog.RunSilent = true;
 

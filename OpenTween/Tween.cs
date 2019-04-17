@@ -851,8 +851,10 @@ namespace OpenTween
                                     SettingManager.Common.HashSelected,
                                     SettingManager.Common.HashIsPermanent,
                                     SettingManager.Common.HashIsHead,
-                                    SettingManager.Common.HashIsNotAddToAtReply);
+                                    SettingManager.Common.HashIsNotAddToAtReply,
+                                    SettingManager.Common.HashIsREC_jikkyo);
             if (!string.IsNullOrEmpty(HashMgr.UseHash) && HashMgr.IsPermanent) HashStripSplitButton.Text = HashMgr.UseHash;
+            //if (HashMgr.IsREC_jikkyo) HashStripSplitButton.Text += " #REC_jikkyo";
 
             //アイコンリスト作成
             this.IconCache = new ImageCache();
@@ -1132,7 +1134,7 @@ namespace OpenTween
                     break;
                 }
             }
-
+            
             if (firstRun)
             {
                 // 初回起動時だけ右下のメニューを目立たせる
@@ -7127,6 +7129,7 @@ namespace OpenTween
                 SettingManager.Common.HashIsHead = HashMgr.IsHead;
                 SettingManager.Common.HashIsPermanent = HashMgr.IsPermanent;
                 SettingManager.Common.HashIsNotAddToAtReply = HashMgr.IsNotAddToAtReply;
+                SettingManager.Common.HashIsREC_jikkyo = HashMgr.IsREC_jikkyo;
                 SettingManager.Common.TrackWord = tw.TrackWord;
                 SettingManager.Common.AllAtReply = tw.AllAtReply;
                 SettingManager.Common.UseImageService = ImageSelector.ServiceIndex;
